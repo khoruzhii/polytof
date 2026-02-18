@@ -1,10 +1,19 @@
-# PolyTof (phase POLYnomial TOFfoli minimization)
+# Polytof (phase POLYnomial TOFfoli minimization)
 
 <p align="center">
   <img src="docs/assets/fig1.png" alt="Pipeline overview" width="700">
 </p>
 
-Polytof minimizes non-Clifford gate counts in quantum circuits over {H, CNOT, Toffoli}, with primary focus on **Toffoli count** (equivalently, CCZ count) and additionally **T-count**. The approach: concentrate all non-Clifford gates into a single phase operator defined by a phase polynomial, represent this polynomial as a symmetric cubic tensor over GF(2), then decompose the tensor. The CP rank of the tensor equals the Toffoli count; the Waring rank equals the T-count.
+Polytof minimizes non-Clifford gate counts in quantum circuits over {H, CNOT, Toffoli}, with primary focus on **Toffoli count** (equivalently, CCZ count) and additionally **T-count**. The approach: concentrate all non-Clifford gates into a single phase operator defined by a phase polynomial, represent this polynomial as a symmetric cubic tensor over 𝔽₂, then decompose the tensor. The CP rank of the tensor equals the Toffoli count; the Waring rank equals the T-count.
+
+Concretely, the task is to decompose a cubic polynomial (defined up to quadratic
+and linear terms) into a sum of products of three linear forms, e.g.
+
+```math
+x_0 x_1 x_2 + x_0 x_1 x_4 + x_0 x_1 x_5 + x_0 x_1 x_7 + x_0 x_2 x_4 + x_2 x_3 x_4 + x_2 x_4 x_6 = (x_0)(x_1)(x_2 + x_4 + x_5 + x_7) + (x_2)(x_4)(x_0 + x_3 + x_6)
+```
+
+Each term on the right corresponds to one Toffoli (CCZ) gate.
 
 > **Note:** Formally, we compute the CP rank over some equivalence class, thus solving the skew-symmetric rank problem.
 
