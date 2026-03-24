@@ -1,5 +1,7 @@
 # Polytof (phase POLYnomial TOFfoli minimization)
 
+[![arXiv:2602.15285](https://img.shields.io/badge/arXiv-2602.15285-b31b1b.svg)](https://arxiv.org/abs/2602.15285)
+
 <p align="center">
   <img src="docs/assets/fig1.png" alt="Pipeline overview" width="700">
 </p>
@@ -63,3 +65,19 @@ third_party/
 - **[docs/tensors.md](docs/tensors.md)** — tensor index with found ranks
 - **[docs/scripts.md](docs/scripts.md)** — Python scripts reference
 - **[examples/README.ipynb](examples/README.ipynb)** — step-by-step guide
+
+## Citing
+
+If you use `polytof` in your research, please cite:
+
+```bibtex
+@misc{khoruzhii_2026,
+      title={Tensor Decomposition for Non-Clifford Gate Minimization},
+      author={Kirill Khoruzhii and Patrick Gelß and Sebastian Pokutta},
+      year={2026},
+      eprint={2602.15285},
+      archivePrefix={arXiv},
+      primaryClass={quant-ph},
+      url={https://arxiv.org/abs/2602.15285},
+}
+```
