@@ -64,6 +64,7 @@ third_party/
 - **[docs/cli.md](docs/cli.md)** — CLI reference for all tools, build options
 - **[docs/tensors.md](docs/tensors.md)** — tensor index with found ranks
 - **[docs/scripts.md](docs/scripts.md)** — Python scripts reference
+- **[docs/reproduce.md](docs/reproduce.md)** — reproducing paper results
 - **[examples/README.ipynb](examples/README.ipynb)** — step-by-step guide
 
 ## Citing
